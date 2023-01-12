@@ -20,4 +20,3 @@ Tipos de datos Object:
 
 Funciones
 */
-/*
