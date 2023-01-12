@@ -53,7 +53,7 @@ const exponente = ( a, b )=>{
     return result;
 }
 
-console.log("El número 4^3= " + exponentes(4,3));
+console.log("El número 4^3= " + exponente(4,3));
 const exponenteAlCuadrado = a => a ** 2;
 console.log("El número 4^2= "+ exponenteAlCuadrado(4));
 
@@ -74,11 +74,11 @@ El parámetro rest siempre debe ir al final de todos los parámetros. */
 function sumatoriaIndefinida(a, b, ...restoDatos){ 
     const sumatoria = a + b;
     for (let i = 0; i < restoDatos.length; i++){
-        sumatoria += restoDatos[i]; // Sumatoria = sumatoria + restoDatos[i];
+        sumatoria += restoDatos[i]; //Sumatoria = sumatoria + restoDatos[i];
     }
     return sumatoria;
 }
-console.log("Sumar varios números:" + sumatoriaIndefinida(2, 3, 4, 5));
+console.log("Sumar varios números:" + sumatoriaIndefinida(2, 3,));
 
 /* Funciones recursivas
 función recursiva es una función que se llama a si misma. */
@@ -93,9 +93,24 @@ function factoriaConCicloFor(a) {
 }
 
 function factorialConRecursion(a) {
+    if(a < 1)
+    return 1;
     return a * factorialConRecursion(a - 1)
 }
-console.console.log("Factorial 3 = " + factoriaConCicloFor(3)); //6
-console.console.log("Factorial 5 = " + factoriaConCicloFor(5)); //120
-console.console.log("Factorial 3 = " + factorialConRecursion(5)); //6
-console.console.log("Factorial 5 = " + factorialConRecursion(5)); //120
+console.log("Factorial 3 = " + factoriaConCicloFor(3)); //6
+console.log("Factorial 5 = " + factoriaConCicloFor(5)); //120
+console.log("Factorial 3 = " + factorialConRecursion(5)); //6
+console.log("Factorial 5 = " + factorialConRecursion(5)); //120
+
+// Hacer una recursión que muestre en consola una saludando como
+/* saludo 1
+saludo 2
+saludo 3...saludo 10
+saludo(10);*/
+function saludo(a, b=1){
+    console.log("saludo"+b);
+    if ( b>=a ) 
+        return  1;
+        return  saludo (a, b + 1);
+    }
+saludo(10);
