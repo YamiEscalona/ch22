@@ -142,15 +142,51 @@ let edadPersona= 18;
 mensaje = "puede volar";
 console.log("la persona puede volar? " + (edadPersona>=18 && mensaje));
 
-// OP1 || OP3 Si OP1 = true, se realiza el resultado de OP1
+// OP1 || OP2 Si OP1 = true, se realiza el resultado de OP1 Si OP1 = false, se realiza el OP2
+
+/*OP1   OP2     R
+   t     t      t
+   t     f      f
+   f     t      f
+   f     f      f*/
 
 let isOnline = true;
 let isActive = true;
 
 if(isOnline)
-console.log("Estamos in");
+console.log("Estamos Autorizado");
 
 if(isOnline && isActive)
-console.log("Estamos in");
+console.log("Estamos Autorizado");
 
-isOnline && isActive && console.log ("Estamos in");
+isOnline && isActive && console.log ("Estamos Autorizado");
+
+let edadMiSobrina = 15;
+console.log(edadMiSobrina>18 && "Puede votar");
+let numDeQuesadillasAComer = "3";
+let guisado = "Huitlacoche";
+console.log("Montse comerá quesadilla de: "+ (numDeQuesadillasAComer && guisado));
+
+let nombreConductor ="Pax";
+let tieneLicenciaConducir = true;
+let edadConductor = 50;
+
+const seRentaAuto = nombreConductor && tieneLicenciaConducir && edadConductor<60;
+console.log(seRentaAuto);
+
+const datosQuesadilla = {
+    tortilla: "maiz",
+    tieneQueso: true,
+    pica: "poquito",
+}
+const picaLaQuesadilla = datosQuesadilla.pica && "pica mucho";
+console.log(picaLaQuesadilla)
+
+
+let u = 0;
+let o = !false;
+let t = "hola";
+let p = "1023";
+
+const qw = u || o || t && p;
+console.log(qw);
